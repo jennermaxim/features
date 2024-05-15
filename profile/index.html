@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        body {
+            background: #afafaf;
+        }
+
+        img {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            background: #dfdfdf;
+            cursor: pointer;
+        }
+
+        input {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="profile.png" alt="Profile" srcset="">
+    <input type="file" name="" id="">
+</body>
+<script>
+    const image = document.querySelector("img"),
+        input = document.querySelector("input");
+
+    image.addEventListener("click", () => {
+        input.click();
+    })
+
+    input.addEventListener("change", () => {
+        image.src = URL.createObjectURL(input.files[0]);
+    })
+</script>
+
+</html>
